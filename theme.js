@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // get the dom elements
   const themeToggle = document.getElementById('theme-toggle');
   const body = document.body;
 
-  // Check local storage for theme preference and apply it
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    body.classList.add(savedTheme);
-    themeToggle.textContent = savedTheme === 'light-mode' ? '☀️' : '🌙';
+  // check localstorage for the theme
+  const pastTheme = localStorage.getItem('theme');
+  if (pastTheme) {
+    body.classList.add(pastTheme);
+    themeToggle.textContent = pastTheme === 'light-mode' ? '☀️' : '🌙'; // sun or moon
   }
 
   themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-mode');
 
+    // switch mased on the current theme
     if (body.classList.contains('light-mode')) {
       localStorage.setItem('theme', 'light-mode');
       themeToggle.textContent = '☀️';
