@@ -26,6 +26,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  <script src="../theme.js" defer></script>
   <body>
     <header>
       <h1><a href="/index.html">aj.</a></h1>
@@ -45,6 +46,19 @@
           <li>
             <a href="/personal/about.html">about</a>
           </li>
+          <li>
+            <a href="/personal/contact.html">contact</a>
+          </li>
+          <li id="theme-js">
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          </li>
+          <noscript>
+            <style>
+              #theme-js {
+                display: none;
+              }
+            </style>
+          </noscript>
         </ul>
       </nav>
     </header>

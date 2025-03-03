@@ -37,7 +37,7 @@
 .card-header h3 {
   font-size: 1.5em;
   font-weight: bold;
-  color: white;
+  color: var(--text-color, white);
 }
 
 .card-header p {
